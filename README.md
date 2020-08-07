@@ -15,7 +15,7 @@
 
 Try it out and have fun!
 
-## 👤 Contributors ✨
+## 👤 Author ✨
 
 <table>
   <tr>    
