@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MineSweeper</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    
+    <div class="overlay hide">
+      <div class="game-over-panel">
+        <h2 id="panel-message"></h2>
+        <button id="play-again-btn">
+          Play Again
+        </button>
+      </div>
+    </div>
+
+    <div id="mines-grid" class="mines-grid">
+    </div>
+    
+    <audio id="pop-sound">
+      <source src="https://cdn.glitch.com/03170861-9fec-4c05-9f36-608f4a64ba40%2Fzapsplat_cartoon_bubble_pop_005_40277.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="congrats-sound">
+      <source src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="fail-sound">
+      <source src="https://cdn.glitch.com/03170861-9fec-4c05-9f36-608f4a64ba40%2Fzapsplat_cartoon_fail_negative_descending_musical_tuba_marimba_oboe_18126.mp3?v=1596757084107" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    
+    <script type="module" src="./scripts/index.js"></script>
+  </body>
+</html>

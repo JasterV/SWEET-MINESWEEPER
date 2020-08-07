@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;700&display=swap");
+
+html {
+  background-color: #838383;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: #799351;
+  color: white;
+  border: none;
+  font-weight: bold;
+  padding: 1em 1.2em;
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.hide {
+  display: none !important;
+}
+
+.mines-grid {
+  display: grid;
+  min-width: 800px;
+  min-height: 800px;
+  grid-gap: 5px;
+}
+
+.cell {
+  background-color: #a8df65;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2rem;
+  transition: all 0.5s;
+  border-radius: 10px;
+  color: #6a2c70;
+}
+
+.cell:hover {
+  background-color: #edf492;
+}
+
+.discovered {
+  background-color: #faf0af;
+}
+
+.discovered:hover {
+  background-color: #faf0af;
+}
+
+.discovered[data-celltype="2"]::before {
+  color: #799351;
+  content: "2";
+}
+
+.discovered[data-celltype="1"]::before {
+  color: #3b6978;
+  content: "1";
+}
+
+.discovered[data-celltype="3"]::before {
+  color: #d54062;
+  content: "3";
+}
+
+.discovered[data-celltype="4"]::before {
+  content: "4";
+}
+
+.discovered[data-celltype="5"]::before {
+  content: "5";
+}
+
+.discovered[data-celltype="6"]::before {
+  content: "6";
+}
+
+.discovered[data-celltype="7"]::before {
+  content: "7";
+}
+
+.discovered[data-celltype="8"]::before {
+  content: "8";
+}
+
+.discovered[data-celltype="mine"]::before {
+  content: "💣";
+}
+
+.flag-cell {
+  position: relative;
+}
+
+.flag-cell::before {
+  position: absolute;
+  content: "⛳️";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99999;
+}
+
+.game-over-panel {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  width: 400px;
+  color: white;
+  line-height: 3rem;
+  font-size: 2rem;
+}
+
+
+@media (max-width: 800px) {
+  .mines-grid {
+    min-width: 600px;
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mines-grid {
+    min-width: 450px;
+    min-height: 450px;
+    grid-gap: 3px;
+  }
+  
+  .cell {
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .mines-grid {
+    min-width: 350px;
+    min-height: 350px;
+  }
+}
