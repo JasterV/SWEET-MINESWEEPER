@@ -11,7 +11,7 @@
 > A cool minesweeper implemented using HTML, CSS and JS!
 
 
-### 🏠 [Homepage](https://jasterv.github.io/sweet-minesweeper)
+### 🏠 [Homepage](https://jasterv.github.io/SWEET-MINESWEEPER/)
 
 Try it out and have fun!
 
